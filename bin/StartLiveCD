@@ -115,7 +115,14 @@ fi
 # DHCP
 ######################################
 # Executes the 'launch_dhcp' function if an ethernet interface was found
-ifconfig eth0 >& /dev/null && { msg "Starting dhcp client"; launch_dhcp; }
+for interface in $(NetInterfaces)
+do
+   if ifconfig $interface  >& /dev/null 
+   then
+      msg "Starting dhcp client on $interface";
+      launch_dhcp $interface;
+   fi
+done
 
 ######################################
 # Configure date and time
