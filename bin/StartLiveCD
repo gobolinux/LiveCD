@@ -13,7 +13,7 @@ clear
 # change console font
 ######################################
 msg "Setting console font"
-setfont /Files/Fonts/Console/lode-lat1u-16.psf.gz
+setfont /Data/Fonts/Console/lode-lat1u-16.psf.gz
 
 ######################################
 # start the udev daemon
