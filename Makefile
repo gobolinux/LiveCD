@@ -9,8 +9,10 @@ SVNTAG=`echo $(PROGRAM)_$(VERSION) | tr "[:lower:]" "[:upper:]" | sed  's,\.,_,g
 
 LANG_TEMP_DIR=Data/Language/.Temp
 
-all: language
-	cd src; make all
+all: autologin language
+
+autologin:
+	make -C src
 
 language:
 	[ -e "$(LANG_TEMP_DIR)" ] || mkdir $(LANG_TEMP_DIR)
