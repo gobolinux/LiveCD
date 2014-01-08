@@ -98,7 +98,6 @@ StartTask GoboHide
 ########################################
 msg "Starting message bus and hardware abstraction layer"
 StartTask MessageBus
-StartTask HAL
 
 ######################################
 # Launch the configuration script
@@ -133,6 +132,7 @@ hwclock --hctosys
 ######################################
 # Prepare grub device map file
 ######################################
+msg "Preparing GRUB device map"
 device_map="/System/Kernel/Boot/grub/device.map"
 [ -e "$device_map" ] || echo quit | grub --device-map "$device_map" --batch &> /dev/null &
 
@@ -147,4 +147,3 @@ cat ${goboPrograms}/LiveCD/Current/Data/Language/Welcome_${LANG}
 ######################################
 inittablnk=${goboPrograms}/BootScripts/Settings/inittab
 ln -nfs $inittablnk ${goboSettings}/inittab
-
