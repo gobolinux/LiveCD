@@ -82,6 +82,11 @@ then
 fi
 
 ######################################
+# Fix environment variables
+######################################
+GrepReplace -B "KDEDIRS=.*" "KDEDIRS=$goboIndex" $goboEnvironment/*
+
+######################################
 # Hostname => "LiveCD"
 ######################################
 msg "Setting hostname"
@@ -94,7 +99,7 @@ msg "Hiding legacy directories"
 StartTask GoboHide
 
 ########################################
-# HAL and message bus
+# Message bus
 ########################################
 msg "Starting message bus and hardware abstraction layer"
 StartTask MessageBus

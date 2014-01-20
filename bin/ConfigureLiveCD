@@ -13,13 +13,16 @@ fi
 ######################################
 if [ -d ${goboPrograms}/Xorg -a "$platform" = "native" ]
 then
-	msg_no_nl "Starting X11 detection (<esc> to skip)" 
-	skip_on_esc 3 && echo && { 
-	   if GenXorgConf > /tmp/xorg.conf 
-       then mv /tmp/xorg.conf ${goboPrograms}/Xorg/Settings/X11/xorg.conf
-       else echo FAILED
-       fi
-	} || echo '<SKIPPED>'
+   msg_no_nl "Starting X11 detection (<esc> to skip)" 
+   skip_on_esc 3 && echo && { 
+      if GenXorgConf > /tmp/xorg.conf 
+      then mv /tmp/xorg.conf ${goboPrograms}/Xorg/Settings/X11/xorg.conf
+      else echo FAILED
+      fi
+   } || echo '<SKIPPED>'
+else
+   rm -f ${goboPrograms}/Xorg/Settings/X11/xorg.conf
+   rm -f ${goboSettings}/X11/xorg.conf
 fi
 
 ######################################
