@@ -1,29 +1,36 @@
-<!DOCTYPE TS><TS>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS><TS version="2.0">
 <context>
     <name>@default</name>
     <message>
+        <location filename=".Temp/KeymapDialog" line="48"/>
         <source>Keyboard map selection</source>
-        <translation>Seleção de mapa de teclado</translation>
+        <translation type="unfinished">Seleção de mapa de teclado</translation>
     </message>
     <message>
+        <location filename=".Temp/KeymapDialog" line="52"/>
         <source>You may select one of the following keyboard maps.</source>
-        <translation>Selecione um mapa de teclado da lista abaixo.</translation>
+        <translation type="unfinished">Selecione um mapa de teclado da lista abaixo.</translation>
     </message>
     <message>
+        <location filename=".Temp/KeymapDialog" line="53"/>
         <source>If you do not select a keyboard map, us.map</source>
-        <translation>Se nenhum mapa for escolhido, será usado o mapa br-abnt2</translation>
+        <translation type="unfinished">Se nenhum mapa for escolhido, será usado o mapa br-abnt2</translation>
     </message>
     <message>
+        <location filename=".Temp/KeymapDialog" line="54"/>
         <source>(the US keyboard map) is the default.  Use the UP/DOWN</source>
-        <translation>Use as teclas seta para cima, seta para baixo,</translation>
+        <translation type="unfinished">Use as teclas seta para cima, seta para baixo,</translation>
     </message>
     <message>
+        <location filename=".Temp/KeymapDialog" line="55"/>
         <source>arrow keys and PageUp/PageDown to scroll through the</source>
-        <translation>PageUp e PageDown para escolher</translation>
+        <translation type="unfinished">PageUp e PageDown para escolher</translation>
     </message>
     <message>
+        <location filename=".Temp/KeymapDialog" line="56"/>
         <source>whole list of choices.</source>
-        <translation>dentre a lista de opções.</translation>
+        <translation type="unfinished">dentre a lista de opções.</translation>
     </message>
 </context>
 </TS>
