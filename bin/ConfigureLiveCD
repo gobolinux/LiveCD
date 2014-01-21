@@ -3,27 +3,11 @@
 source GoboPath
 source StartFunctions
 
-if $(find ${goboObjects}/devices -type f -name vendor | xargs grep -qi "qemu\|virtual\|vbox")
-then platform=emulated
-else platform=native
-fi
-
 ######################################
-# X11
+# Let Xorg autodetect all devices
 ######################################
-if [ -d ${goboPrograms}/Xorg -a "$platform" = "native" ]
-then
-   msg_no_nl "Starting X11 detection (<esc> to skip)" 
-   skip_on_esc 3 && echo && { 
-      if GenXorgConf > /tmp/xorg.conf 
-      then mv /tmp/xorg.conf ${goboPrograms}/Xorg/Settings/X11/xorg.conf
-      else echo FAILED
-      fi
-   } || echo '<SKIPPED>'
-else
-   rm -f ${goboPrograms}/Xorg/Settings/X11/xorg.conf
-   rm -f ${goboSettings}/X11/xorg.conf
-fi
+rm -f ${goboPrograms}/Xorg/Settings/X11/xorg.conf
+rm -f ${goboSettings}/X11/xorg.conf
 
 ######################################
 # Choose language
@@ -57,9 +41,9 @@ export LANG=${LANG}
 export LC_ALL=${LANG}
 EOF
 
-######################################
-# Adjusting .kde to the chosen lang
-######################################
+##########################################
+# Adjusting .kde to the chosen lang (TODO)
+##########################################
 
 if [ -d "${goboPrograms}/KDE-Base" ]
 then
@@ -90,14 +74,3 @@ MAPNAME="`basename $MAPNAME`"
 basename $MAPNAME .map  > ${goboTemp}/setup/keymap
 msg "Loading selected Keymap"
 loadkeys $MAPNAME
-
-######################################
-# Adjusting xorg.conf
-######################################
-if [ -d ${goboPrograms}/Xorg -a -f ${goboPrograms}/Xorg/Settings/X11/xorg.conf ]
-then
-	msg "Adjusting xorg.conf"
-	cat ${goboPrograms}/Xorg/Settings/X11/xorg.conf | ModifyXorgConf `cat ${goboTemp}/setup/keymap` > /tmp/xorg.conf.$$ 
-	cp -f /tmp/xorg.conf.$$ ${goboPrograms}/Xorg/Settings/X11/xorg.conf
-	cp -f /tmp/xorg.conf.$$ ${goboPrograms}/Xorg/Current/Resources/Defaults/Settings/X11/xorg.conf
-fi
