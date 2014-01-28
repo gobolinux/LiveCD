@@ -21,6 +21,8 @@ dialog --nocancel --title "Language"  --menu "Choose your language"  11 46 4 \
      "en_US" "English"    \
      "pt_BR" "Português"  \
      "hu_HU" "Magyar"  \
+     "es_ES" "Spanish" \
+     "pl_PL" "Polish" \
      "de_DE" "Deutsch" 2> ${goboTemp}/setup/language
 
 [ "$?" = 0 ] && break
@@ -51,10 +53,13 @@ then
    pt_BR) kdecountry=br; kdelanguage=pt_BR ;;
    hu_HU) kdecountry=hu; kdelanguage=hu_HU ;;
    de_DE) kdecountry=de; kdelanguage=de ;;
+   es_ES) kdecountry=es; kdelanguage=es ;;
+   pl_PL) kdecountry=pl; kdelanguage=pl ;;
    esac
    if [ "$kdecountry" ]
    then
       eskeldir=${goboPrograms}/EnhancedSkel/Current/testuser/
+      mkdir -p ${eskeldir}/.kde/share/config
 cat <<EOF | tee -a $HOME/.kde/share/config/kdeglobals >> ${eskeldir}/.kde/share/config/kdeglobals
 [Locale]
 Country=$kdecountry
