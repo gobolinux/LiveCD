@@ -1,0 +1,17 @@
+
+[32;1m ---------------------------- [36;1mBIENVENIDOS A GOBOLINUX[32;1m ----------------------------[0m
+
+Bienvenidos al entorno del CD en vivo de GoboLinux. Éste es un sistema
+GoboLinux completamente funcional ejecutándose directamente del CD-ROM,
+desde el cual también puedes instalar GoboLinux a tu disco duro.
+
+ * Para entrar al entorno gráfico escribe:
+   [33;1mstartx[0m
+
+ * El instalador de GoboLinux puede ser usado en modo gráfico o de texto.
+   En el gráfico, sólo presioneen el ícono "[32mInstall GoboLinux[0m".
+   Para instalar usando el modo interactivo basado en texto escriba:
+   [33;1mInstaller[0m
+
+ * Para más información visite [1mhttp://gobolinux.org[0m
+
