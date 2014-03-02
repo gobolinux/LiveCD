@@ -64,14 +64,6 @@ do
 done
 
 ######################################
-# Update the MIME database
-######################################
-if which update-mime-database 2> /dev/null && [ -d /Data/Variable/xdg/mime ]
-then
-   update-mime-database /Data/Variable/xdg/mime | grep -v Unknown
-fi
-
-######################################
 # Initialize Users directory
 ######################################
 msg "Initializing home directory"
