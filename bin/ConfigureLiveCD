@@ -43,10 +43,10 @@ export LC_ALL=${LANG}
 EOF
 
 ##########################################
-# Adjusting .kde to the chosen lang (TODO)
+# Adjusting .kde to the chosen lang
 ##########################################
 
-if [ -d "${goboPrograms}/KDE-Base" ]
+if [ -d "${goboPrograms}/KDE-Libs" ]
 then
    case "$LANG" in
    pt_BR) kdecountry=br; kdelanguage=pt_BR ;;
