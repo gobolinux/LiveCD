@@ -5,7 +5,7 @@
     <message>
         <location filename=".Temp/KeymapDialog" line="48"/>
         <source>Keyboard map selection</source>
-        <translation>Selección de distribución de teclado</translation>
+        <translation>SelecciÃ³n de distribuciÃ³n de teclado</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="52"/>
@@ -20,12 +20,12 @@
     <message>
         <location filename=".Temp/KeymapDialog" line="54"/>
         <source>(the US keyboard map) is the default.  Use the UP/DOWN</source>
-        <translation>(la distribución del teclado para E.U.) será la elegida. Use ARRIBA/ABAJO</translation>
+        <translation>(la distribuciÃ³n del teclado para E.U.) serÃ¡ la elegida. Use ARRIBA/ABAJO</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="55"/>
         <source>arrow keys and PageUp/PageDown to scroll through the</source>
-        <translation>y AvPág/RePág para desplazarse a través de</translation>
+        <translation>y AvPÃ¡g/RePÃ¡g para desplazarse a travÃ©s de</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="56"/>

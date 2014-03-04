@@ -10,12 +10,12 @@
     <message>
         <location filename=".Temp/KeymapDialog" line="52"/>
         <source>You may select one of the following keyboard maps.</source>
-        <translation type="unfinished">Sie können eines der folgenden Layouts auswählen.</translation>
+        <translation type="unfinished">Sie kÃ¶nnen eines der folgenden Layouts auswÃ€hlen.</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="53"/>
         <source>If you do not select a keyboard map, us.map</source>
-        <translation type="unfinished">Falls sie kein Tastaturlayout auswählen wird &apos;de-latin1.map&apos;</translation>
+        <translation type="unfinished">Falls sie kein Tastaturlayout auswÃ€hlen wird &apos;de-latin1.map&apos;</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="54"/>
