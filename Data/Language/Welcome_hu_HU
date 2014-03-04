@@ -1,17 +1,17 @@
 
-[32;1m ---------------------------- [36;1mÜDVÖZÖL A GOBOLINUX[32;1m ----------------------------[0m
+[32;1m ---------------------------- [36;1mÃœDVÃ–ZÃ–L A GOBOLINUX[32;1m ----------------------------[0m
 
-Üdvözlünk a GoboLinux live-CD környezetben! Ez egy összfunkciós
-GoboLinux rendszer, mely közvetlenül errõl a CD-ROM-ról fut, melyrõl
-telepítheted is a GoboLinuxot a merevlemezre.
+ÃœdvÃ¶zlÃ¼nk a GoboLinux live-CD kÃ¶rnyezetben! Ez egy Ã¶sszfunkciÃ³s
+GoboLinux rendszer, mely kÃ¶zvetlenÃ¼l errÃµl a CD-ROM-rÃ³l fut, melyrÃµl
+telepÃ­theted is a GoboLinuxot a merevlemezre.
 
- * A grafikus környezetbe való belépéshez üsd be:
+ * A grafikus kÃ¶rnyezetbe valÃ³ belÃ©pÃ©shez Ã¼sd be:
    [33;1mstartx[0m
 
- * A GoboLinux installer szöveges és grafikus módban egyaránt használható.
-   Grafikus módban klikkelj az "[32mA GoboLinux telepítése[0m" ikonra.
-   Az interaktív szövegbázisú installert használva üsd be:
+ * A GoboLinux installer szÃ¶veges Ã©s grafikus mÃ³dban egyarÃ¡nt hasznÃ¡lhatÃ³.
+   Grafikus mÃ³dban klikkelj az "[32mA GoboLinux telepÃ­tÃ©se[0m" ikonra.
+   Az interaktÃ­v szÃ¶vegbÃ¡zisÃº installert hasznÃ¡lva Ã¼sd be:
    [33;1mInstaller[0m
 
- * Több információ végett látogasd meg e honlapot: [1mhttp://gobolinux.org[0m
+ * TÃ¶bb informÃ¡ciÃ³ vÃ©gett lÃ¡togasd meg e honlapot: [1mhttp://gobolinux.org[0m
 

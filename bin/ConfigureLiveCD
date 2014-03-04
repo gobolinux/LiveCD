@@ -17,9 +17,9 @@ mkdir ${goboTemp}/setup
 while :
 do
 
-dialog --nocancel --title "Language"  --menu "Choose your language"  11 46 5 \
+dialog --nocancel --title "Language"  --menu "Choose your language"  12 46 5 \
      "en_US" "English"    \
-     "pt_BR" "Português"  \
+     "pt_BR" "PortuguÃªs"  \
      "hu_HU" "Magyar"  \
      "es_MX" "Spanish" \
      "de_DE" "Deutsch" 2> ${goboTemp}/setup/language
