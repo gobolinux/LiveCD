@@ -10,12 +10,6 @@ export LANG=en_US
 clear
 
 ######################################
-# change console font
-######################################
-msg "Setting console font"
-setfont /Data/Fonts/Console/lode-lat1u-16.psf.gz
-
-######################################
 # start the udev daemon
 ######################################
 msg "Starting Udev"
@@ -105,15 +99,19 @@ msg "Starting message bus and hardware abstraction layer"
 StartTask MessageBus
 
 ######################################
+# change console font
+######################################
+msg "Setting console font"
+if [ "$LANG" = "hu_HU" ]
+then setfont "${goboSettings}/kbd/consolefonts/lat2-16.psfu.gz"
+else setfont /Data/Fonts/Console/lode-lat1u-16.psf.gz
+fi
+
+######################################
 # Launch the configuration script
 ######################################
 ConfigureLiveCD
 export LANG=`cat ${goboTemp}/setup/language`
-
-if [ "$LANG" = "hu_HU" ]
-then
-   setfont "${goboSettings}/kbd/consolefonts/lat2-16.psfu.gz"
-fi
 
 ######################################
 # DHCP
