@@ -5,7 +5,7 @@ source StartFunctions
 source ScriptFunctions
 Import PostInstall
 
-export LANG=en_US
+export LANG=en_US.UTF-8
 
 clear
 
@@ -13,7 +13,7 @@ clear
 # start the udev daemon
 ######################################
 msg "Starting Udev"
-mount /System/Kernel/Objects
+mount /sys
 /System/Links/Tasks/Udev
 msg "Starting log daemon"
 syslogd
