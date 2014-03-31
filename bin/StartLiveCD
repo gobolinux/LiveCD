@@ -14,7 +14,7 @@ clear
 ######################################
 msg "Starting Udev"
 mount /sys
-/System/Links/Tasks/Udev
+${goboTasks}/Udev
 msg "Starting log daemon"
 syslogd
 
@@ -136,7 +136,7 @@ hwclock --hctosys
 # Prepare grub device map file
 ######################################
 msg "Preparing GRUB device map"
-device_map="/System/Kernel/Boot/grub/device.map"
+device_map="${goboBoot}/grub/device.map"
 [ -e "$device_map" ] || echo quit | grub --device-map "$device_map" --batch &> /dev/null &
 
 ######################################
