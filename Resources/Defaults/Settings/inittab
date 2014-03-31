@@ -1,0 +1,17 @@
+id:2:initdefault:
+
+l1:S:wait:/System/Index/bin/BootDriver BootUp
+su:S:respawn:/System/Index/bin/sulogin
+
+l2:12345:wait:/System/Index/bin/BootDriver Console
+l6:6:wait:/System/Index/bin/BootDriver Reboot
+l0:0:wait:/System/Index/bin/BootDriver Halt
+
+ca:12345:ctrlaltdel:/System/Index/bin/shutdown -t1 -r now
+
+1:2345:respawn:/System/Index/bin/agetty --noclear -n -l /Programs/LiveCD/Current/bin/AutoLogin tty1 9600
+2:2345:respawn:/System/Index/bin/agetty -n -l /Programs/LiveCD/Current/bin/AutoLogin tty2 9600
+3:2345:respawn:/System/Index/bin/agetty -n -l /Programs/LiveCD/Current/bin/AutoLogin tty3 9600
+4:2345:respawn:/System/Index/bin/agetty -n -l /Programs/LiveCD/Current/bin/AutoLogin tty4 9600
+5:2345:respawn:/System/Index/bin/agetty -n -l /Programs/LiveCD/Current/bin/AutoLogin tty5 9600
+6:2345:respawn:/System/Index/bin/agetty -n -l /Programs/LiveCD/Current/bin/AutoLogin tty6 9600
