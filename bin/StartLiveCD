@@ -4,6 +4,7 @@ source GoboPath
 source StartFunctions
 source ScriptFunctions
 Import PostInstall
+Import Requirements
 
 export LANG=en_US.UTF-8
 
@@ -51,9 +52,13 @@ for package in `ls /Programs`
 do
    if [ -e /Programs/${package}/Current/Resources/PostInstall ]
    then
-#      msg "Processing PostInstall script for ${package}..."
       version="`readlink /Programs/${package}/Current`"
       Run_PostInstall "${package}" "${version}" "" "" "/" 2>&1 >/dev/null
+   fi
+   if [ -e /Programs/${package}/Current/Resources/Requirements ]
+   then
+      version="`readlink /Programs/${package}/Current`"
+      Run_Requirements_Wrapper "/Programs/${package}/${version}" 2>&1 >/dev/null
    fi
 done
 
@@ -99,7 +104,7 @@ msg "Starting message bus and hardware abstraction layer"
 StartTask MessageBus
 
 ######################################
-# change console font
+# Change console font
 ######################################
 msg "Setting console font"
 if [ "$LANG" = "hu_HU" ]
@@ -125,6 +130,8 @@ do
       launch_dhcp $interface;
    fi
 done
+# Also launch the ConnMan network manager
+which connmand &> /dev/null && connmand
 
 ######################################
 # Configure date and time
