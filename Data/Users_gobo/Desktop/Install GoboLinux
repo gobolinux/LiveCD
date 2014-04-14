@@ -2,7 +2,7 @@
 Comment=
 Comment[en_US]=
 Encoding=UTF-8
-Exec=/bin/GoboLinuxInstaller install qt
+Exec=/bin/Installer
 GenericName=
 GenericName[en_US]=
 Icon=/System/Index/share/Installer/Images/que.png
