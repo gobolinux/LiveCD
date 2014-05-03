@@ -10,7 +10,7 @@ LIVECD_DEVICE=$(basename $(grep "/Mount/.Pivot/Mount/CD-ROM" /proc/mounts | awk 
 if [ "$LIVECD_DEVICE" != "sr0" ]
 then
    # Cannot eject the USB device -- sorry guys!
-   return 0
+   exit 0
 fi
 
 case "$operation" in
