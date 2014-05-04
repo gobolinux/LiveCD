@@ -109,7 +109,7 @@ StartTask MessageBus
 msg "Setting console font"
 if [ "$LANG" = "hu_HU" ]
 then setfont "${goboSettings}/kbd/consolefonts/lat2-16.psfu.gz"
-else setfont /Data/Fonts/Console/lode-lat1u-16.psf.gz
+else setfont "${goboShared}/consolefonts/lode-2.0-lat1u-16.psfu.gz"
 fi
 
 ######################################
