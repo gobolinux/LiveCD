@@ -81,6 +81,14 @@ de_DE)
    "qwertz/de_CH-latin1.map" ""
    )
    ;;
+fr_FR)
+  defaults_for_language=(
+  "azerty/fr-latin1.map" ""
+  "azerty/fr-latin9.map" ""
+  "azerty/fr-pc.map" ""
+  "azerty/fr.map" ""
+  )
+  ;;
 hu_HU)
    defaults_for_language=(
    "qwertz/hu.map" ""

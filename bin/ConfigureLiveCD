@@ -17,10 +17,11 @@ mkdir ${goboTemp}/setup
 while :
 do
 
-dialog --nocancel --title "Language"  --menu "Choose your language"  12 46 5 \
+dialog --nocancel --title "Language"  --menu "Choose your language"  12 46 6 \
      "en_US" "English"    \
      "pt_BR" "Português"  \
      "hu_HU" "Magyar"  \
+     "fr_FR" "French" \
      "es_MX" "Spanish" \
      "de_DE" "Deutsch" 2> ${goboTemp}/setup/language
 
@@ -53,6 +54,7 @@ then
    hu_HU) kdecountry=hu; kdelanguage=hu_HU ;;
    de_DE) kdecountry=de; kdelanguage=de ;;
    es_MX) kdecountry=es; kdelanguage=es ;;
+   fr_FR) kdecountry=fr; kdelanguage=fr ;;
    pl_PL) kdecountry=pl; kdelanguage=pl ;;
    esac
    if [ "$kdecountry" ]

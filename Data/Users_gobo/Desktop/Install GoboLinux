@@ -11,6 +11,7 @@ Name=Install GoboLinux
 Name[en_US]=Install GoboLinux
 Name[pt_BR]=Instalar o GoboLinux
 Name[hu_HU]=A GoboLinux telepķtése
+Name[fr_FR]=Installer GoboLinux
 Path=
 ServiceTypes=
 SwallowExec=
