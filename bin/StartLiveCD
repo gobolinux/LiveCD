@@ -130,8 +130,6 @@ do
       launch_dhcp $interface;
    fi
 done
-# Also launch the ConnMan network manager
-which connmand &> /dev/null && connmand
 
 ######################################
 # Configure date and time
