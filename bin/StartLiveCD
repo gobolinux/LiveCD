@@ -67,7 +67,7 @@ done
 ######################################
 msg "Initializing home directory"
 mkdir -p ${goboUsers}
-export HOME=${goboUsers}/gobo
+export HOME=${goboUsers}/root
 if [ ! -f $HOME/.zshrc ]
 then
     cp -a ${goboPrograms}/EnhancedSkel/Current/testuser $HOME || mkdir -p $HOME
