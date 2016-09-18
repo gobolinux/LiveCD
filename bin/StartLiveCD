@@ -14,7 +14,7 @@ clear
 # start the udev daemon
 ######################################
 msg "Starting Udev"
-mount /sys
+mountpoint -q /sys || mount -t sysfs none /sys
 ${goboTasks}/Udev
 msg "Starting log daemon"
 syslogd
@@ -22,8 +22,8 @@ syslogd
 ######################################
 # load OSS compatibility for ALSA
 ######################################
-modprobe snd-pcm-oss
-modprobe snd-mixer-oss
+modinfo snd-pcm-oss   >& /dev/null && modprobe snd-pcm-oss
+modinfo snd-mixer-oss >& /dev/null && modprobe snd-mixer-oss
 
 ######################################
 # launch the loopback interface
