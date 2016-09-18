@@ -48,17 +48,12 @@ mount -a -t tmpfs,usbfs
 ######################################
 # Run PostInstall scripts
 ######################################
-for package in `ls /Programs`
+for package in `ls ${goboPrograms}`
 do
-   if [ -e /Programs/${package}/Current/Resources/PostInstall ]
+   if [ -e ${goboPrograms}/${package}/Current/Resources/PostInstall ]
    then
-      version="`readlink /Programs/${package}/Current`"
+      version="`readlink ${goboPrograms}/${package}/Current`"
       Run_PostInstall "${package}" "${version}" "" "" "/" 2>&1 >/dev/null
-   fi
-   if [ -e /Programs/${package}/Current/Resources/Requirements ]
-   then
-      version="`readlink /Programs/${package}/Current`"
-      Run_Requirements_Wrapper "/Programs/${package}/${version}" 2>&1 >/dev/null
    fi
 done
 
