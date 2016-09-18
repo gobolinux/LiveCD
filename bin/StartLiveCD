@@ -148,7 +148,7 @@ cat ${goboPrograms}/LiveCD/Current/Data/Language/Welcome_${LANG}
 #################################################
 # Fix the multi-user console and enable CD eject
 #################################################
-inittablnk=${goboPrograms}/BootScripts/Settings/inittab
+inittablnk=${goboPrograms}/LiveCD/Settings/inittab
 rm -f ${goboSettings}/inittab
 cp $inittablnk ${goboSettings}/inittab
 GrepReplace -B "/System/Index/bin/BootDriver Reboot" \
