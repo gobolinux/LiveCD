@@ -80,9 +80,3 @@ MAPNAME="`basename $MAPNAME`"
 basename $MAPNAME .map  > ${goboTemp}/setup/keymap
 msg "Loading selected Keymap"
 loadkeys $MAPNAME
-
-
-######################################
-# Adjust Enlightenment
-######################################
-ModifyEnlightenmentConf $(basename $MAPNAME .map) "$LANG"
