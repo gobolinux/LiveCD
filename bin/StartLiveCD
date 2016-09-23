@@ -44,6 +44,7 @@ done
 # Mount remaining filesystems
 ######################################
 mount -a -t tmpfs,usbfs
+mountpoint /System/Kernel/Modules || mount /System/Kernel/Modules
 
 ######################################
 # Run PostInstall scripts
@@ -53,6 +54,7 @@ do
    if [ -e ${goboPrograms}/${package}/Current/Resources/PostInstall ]
    then
       version="`readlink ${goboPrograms}/${package}/Current`"
+      chmod +x ${goboPrograms}/${package}/Current/Resources/PostInstall
       Run_PostInstall "${package}" "${version}" "" "" "/" 2>&1 >/dev/null
    fi
 done
