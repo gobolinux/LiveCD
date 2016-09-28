@@ -6,6 +6,7 @@ PACKAGE_ROOT=$(PACKAGE_DIR)/$(PROGRAM)
 PACKAGE_BASE=$(PACKAGE_ROOT)/$(VERSION)
 PACKAGE_FILE=$(PACKAGE_DIR)/$(PROGRAM)--$(VERSION)--$(shell uname -m).tar.bz2
 SVNTAG=`echo $(PROGRAM)_$(VERSION) | tr "[:lower:]" "[:upper:]" | sed  's,\.,_,g'`
+PYLUPDATE=pylupdate4
 
 LANG_TEMP_DIR=Data/Language/.Temp
 
@@ -19,7 +20,7 @@ language:
 	for file in ConfigureLiveCD KeymapDialog; \
 	do cat bin/$$file | sed "s/tr \(.*\)/tr\(\1\)/g" > $(LANG_TEMP_DIR)/$$file; \
 	done
-	cd $(LANG_TEMP_DIR)/../; pylupdate4 LiveCD.pro 2> /dev/null
+	cd $(LANG_TEMP_DIR)/../; $(PYLUPDATE) LiveCD.pro 2> /dev/null
 	rm -f $(LANG_TEMP_DIR)/*
 	rmdir $(LANG_TEMP_DIR)
 
