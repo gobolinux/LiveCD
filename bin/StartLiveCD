@@ -44,7 +44,7 @@ done
 # Mount remaining filesystems
 ######################################
 mount -a -t tmpfs,usbfs
-mountpoint /System/Kernel/Modules || mount /System/Kernel/Modules
+mountpoint -q /System/Kernel/Modules || mount /System/Kernel/Modules
 
 ############################################################
 # Run PostInstall scripts and prepare the Environment Cache
