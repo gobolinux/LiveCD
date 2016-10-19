@@ -86,8 +86,8 @@ export HOME=${goboUsers}/root
 if [ ! -f $HOME/.zshrc ]
 then
     cp -a ${goboPrograms}/EnhancedSkel/Current/testuser $HOME || mkdir -p $HOME
-    cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/Desktop/* $HOME/Desktop
-    cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/.zshrc    $HOME
+    cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/.local $HOME
+    cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/.zshrc $HOME
 
     cd $HOME
     GrepReplace -R "/Users/testuser" $HOME
