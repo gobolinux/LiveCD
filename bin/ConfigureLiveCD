@@ -59,7 +59,7 @@ then
    esac
    if [ "$kdecountry" ]
    then
-      eskeldir=${goboPrograms}/EnhancedSkel/Current/testuser/
+      eskeldir=${goboPrograms}/EnhancedSkel/Current/Resources/Defaults/Settings/skel/
       mkdir -p ${eskeldir}/.kde/share/config
 cat <<EOF | tee -a $HOME/.kde/share/config/kdeglobals >> ${eskeldir}/.kde/share/config/kdeglobals
 [Locale]
@@ -80,3 +80,8 @@ MAPNAME="`basename $MAPNAME`"
 basename $MAPNAME .map  > ${goboTemp}/setup/keymap
 msg "Loading selected Keymap"
 loadkeys $MAPNAME
+
+######################################
+# Adjust ~/.xinitrc
+######################################
+ModifyXinitrc $(basename $MAPNAME .map)
