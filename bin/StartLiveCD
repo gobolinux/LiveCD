@@ -85,7 +85,7 @@ mkdir -p ${goboUsers}
 export HOME=${goboUsers}/root
 if [ ! -f $HOME/.zshrc ]
 then
-    cp -a ${goboPrograms}/EnhancedSkel/Current/testuser $HOME || mkdir -p $HOME
+    cp -a ${goboPrograms}/EnhancedSkel/Current/Resources/Defaults/Settings/skel $HOME || mkdir -p $HOME
     cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/.local $HOME
     cp -a ${goboPrograms}/LiveCD/Current/Data/Users_gobo/.zshrc $HOME
 
