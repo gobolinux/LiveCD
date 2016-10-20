@@ -9,7 +9,7 @@ function msg_no_nl() {
 }
 
 function launch_dhcp() {
-   dhcpcd -t 5 $1 2> /dev/null &
+   dhcpcd -t 15 $1 2> /dev/null &
 }
 
 function skip_on_esc_simple() {
