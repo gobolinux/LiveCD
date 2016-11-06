@@ -7,11 +7,6 @@ action="$2"
 
 # Check if we are running from USB or CD
 LIVECD_DEVICE=$(basename $(grep "/Mount/.Pivot/Mount/CD-ROM" /proc/mounts | awk {'print $1'}))
-if [ "$LIVECD_DEVICE" != "sr0" ]
-then
-   # Cannot eject the USB device -- sorry guys!
-   exit 0
-fi
 
 case "$operation" in
    [sS]tart)
@@ -28,7 +23,10 @@ case "$operation" in
       echo 1 > $goboStatus/sys/kernel/printk
 
       # Eject the CD from the tray
-      eject
+      if [ "$LIVECD_DEVICE" = "sr0" ]
+      then
+         eject
+      fi
 
       $goboExecutables/BootDriver $action 2> /dev/null
       ;;
