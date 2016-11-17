@@ -35,7 +35,7 @@ then
    language=en_US
 fi
 
-export LANG=${language}
+export LANG=${language}.UTF-8
 export LC_ALL="$LANG"
 
 cat <<EOF | tee -a $HOME/.zshrc > $HOME/.bashrc
