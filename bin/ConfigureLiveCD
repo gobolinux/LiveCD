@@ -43,32 +43,6 @@ export LANG=${LANG}
 export LC_ALL=${LANG}
 EOF
 
-##########################################
-# Adjusting .kde to the chosen lang
-##########################################
-
-if [ -d "${goboPrograms}/KDE-Libs" ]
-then
-   case "$LANG" in
-   pt_BR) kdecountry=br; kdelanguage=pt_BR ;;
-   hu_HU) kdecountry=hu; kdelanguage=hu_HU ;;
-   de_DE) kdecountry=de; kdelanguage=de ;;
-   es_MX) kdecountry=es; kdelanguage=es ;;
-   fr_FR) kdecountry=fr; kdelanguage=fr ;;
-   pl_PL) kdecountry=pl; kdelanguage=pl ;;
-   esac
-   if [ "$kdecountry" ]
-   then
-      eskeldir=${goboPrograms}/EnhancedSkel/Current/Resources/Defaults/Settings/skel/
-      mkdir -p ${eskeldir}/.kde/share/config
-cat <<EOF | tee -a $HOME/.kde/share/config/kdeglobals >> ${eskeldir}/.kde/share/config/kdeglobals
-[Locale]
-Country=$kdecountry
-Language=$kdelanguage
-EOF
-   fi
-fi
-
 ######################################
 # Choose keymap
 ######################################

@@ -95,11 +95,6 @@ then
     cd - &> /dev/null
 fi
 
-######################################
-# Fix environment variables
-######################################
-GrepReplace -B "KDEDIRS=.*" "KDEDIRS=$goboIndex" $goboEnvironment/*
-
 ########################################
 # GoboHide task
 ########################################
