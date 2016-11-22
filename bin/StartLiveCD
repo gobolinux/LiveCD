@@ -63,6 +63,13 @@ mountpoint -q /System/Kernel/Modules || mount /System/Kernel/Modules
 cat /dev/null > ${goboEnvironment}/Cache
 for package in `ls ${goboPrograms}`
 do
+
+   # Skip annoying packages not needed in the live environment
+   if [ "${package}" = "Docbook-XML-DTD" -o "${package}" = "Docbook-XSL-Stylesheets" ]
+   then
+      continue
+   fi
+
    version="$(readlink ${goboPrograms}/${package}/Current)"
    if [ -e ${goboPrograms}/${package}/${version}/Resources/PostInstall ]
    then
