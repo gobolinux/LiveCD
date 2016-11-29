@@ -65,7 +65,7 @@ for package in `ls ${goboPrograms}`
 do
 
    # Skip annoying packages not needed in the live environment
-   if [ "${package}" = "Docbook-XML-DTD" -o "${package}" = "Docbook-XSL-Stylesheets" ]
+   if [ "${package}" = "DocBook-XML-DTD" -o "${package}" = "DocBook-XSL-Stylesheets" ]
    then
       continue
    fi
