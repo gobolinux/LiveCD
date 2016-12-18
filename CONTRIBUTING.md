@@ -1,7 +1,7 @@
 
-# This repo is for Live CD issues only
+# This repo is for Live CD issues
 
-Please report here only issues with getting the Live CD environment to work.
+Thank you for contributing! Please report here only issues with getting the Live CD environment to work.
 
 For other kinds of issues, please find the appropriate repository at
 http://github.com/gobolinux at file an issue there.
