@@ -6,7 +6,7 @@ source StartFunctions
 ######################################
 # Let Xorg autodetect all devices
 ######################################
-rm -f ${goboPrograms}/Xorg/Settings/X11/xorg.conf
+rm -f $(readlink -f ${goboSettings}/X11/xorg.conf)
 rm -f ${goboSettings}/X11/xorg.conf
 
 ######################################
