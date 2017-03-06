@@ -13,14 +13,14 @@ case "$operation" in
       # Kill all processes
       killall5
 
+      # Quiet the kernel
+      echo 1 > $goboStatus/sys/kernel/printk
+
       # Unmount file systems
       cat $goboStatus/mounts | sort -r | awk {'print $2'} | while read mp
       do
          umount ${mp} 2> /dev/null
       done
-
-      # Quiet the kernel
-      echo 1 > $goboStatus/sys/kernel/printk
 
       # Eject the CD from the tray
       if [ "$LIVECD_DEVICE" = "sr0" ]
