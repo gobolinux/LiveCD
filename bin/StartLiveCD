@@ -177,3 +177,14 @@ cp $inittablnk ${goboSettings}/inittab
 GrepReplace -B "/System/Index/bin/BootDriver Reboot" \
                "/System/Tasks/Eject start Reboot" \
                ${goboSettings}/inittab
+
+#######################################################
+# Fix the video driver on VMware, QEMU, and VirtualBox
+#######################################################
+product=$(dmidecode --string system-product-name)
+chassis=$(dmidecode --string chassis-manufacturer)
+if [ "$product" = "VirtualBox" ] || [ "$product" = "VMware Virtual Platform" ] || [ "$chassis" = "QEMU" ]
+then
+    rm -f /Programs/Xorg-Driver/Current/share/X11/xorg.conf.d/20-intel.conf
+    rm -f /Programs/Xorg-Driver/Current/lib/xorg/modules/drivers/vmware_drv.*
+fi
