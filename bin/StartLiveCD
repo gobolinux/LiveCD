@@ -188,3 +188,8 @@ then
     rm -f /Programs/Xorg-Driver/Current/share/X11/xorg.conf.d/20-intel.conf
     rm -f /Programs/Xorg-Driver/Current/lib/xorg/modules/drivers/vmware_drv.*
 fi
+
+########################################
+# Fix support for Compile on the LiveCD
+########################################
+grep -v overlayfs /System/Settings/Scripts/Directories.conf > /tmp/x && mv /tmp/x /System/Settings/Scripts/Directories.conf
