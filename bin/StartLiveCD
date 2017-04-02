@@ -183,7 +183,8 @@ GrepReplace -B "/System/Index/bin/BootDriver Reboot" \
 #######################################################
 product=$(dmidecode --string system-product-name)
 chassis=$(dmidecode --string chassis-manufacturer)
-if [ "$product" = "VirtualBox" ] || [ "$product" = "VMware Virtual Platform" ] || [ "$chassis" = "QEMU" ]
+intel_vga=$(lspci -nn | grep VGA | grep Intel)
+if [ "$product" = "VirtualBox" ] || [ "$product" = "VMware Virtual Platform" ] || [ "$chassis" = "QEMU" ] || [ -z "$intel_vga" ]
 then
     rm -f /Programs/Xorg-Driver/Current/share/X11/xorg.conf.d/20-intel.conf
     rm -f /Programs/Xorg-Driver/Current/lib/xorg/modules/drivers/vmware_drv.*
