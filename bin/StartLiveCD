@@ -26,12 +26,6 @@ msg "Starting log daemon"
 syslogd
 
 ######################################
-# load OSS compatibility for ALSA
-######################################
-modinfo snd-pcm-oss   >& /dev/null && modprobe snd-pcm-oss
-modinfo snd-mixer-oss >& /dev/null && modprobe snd-mixer-oss
-
-######################################
 # load FUSE for unionfs
 ######################################
 modinfo fuse >& /dev/null && modprobe fuse
@@ -119,7 +113,6 @@ StartTask MessageBus
 ######################################
 msg "Starting printing services"
 StartTask CUPS
-StartTask Avahi
 
 ######################################
 # Change console font
