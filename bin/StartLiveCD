@@ -16,12 +16,6 @@ clear
 msg "Setting hostname"
 hostname LiveCD
 
-######################################
-# start the udev daemon
-######################################
-msg "Starting Udev"
-mountpoint -q /sys || mount -t sysfs none /sys
-${goboTasks}/Udev
 msg "Starting log daemon"
 syslogd
 
