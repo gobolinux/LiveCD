@@ -31,6 +31,14 @@ msg "Launching the loopback interface"
 ifconfig lo 127.0.0.1
 
 ######################################
+# trigger udev events
+######################################
+udevd --daemon --resolve-names=never
+udevadm trigger --action=add --type=subsystems
+udevadm trigger --action=add --type=devices
+udevadm settle
+
+######################################
 # mount extra partitions
 ######################################
 for i in `fdisk -l | grep "Linux swap" | cut -d" " -f1`
