@@ -29,6 +29,7 @@ modinfo fuse >& /dev/null && modprobe fuse
 ######################################
 msg "Launching the loopback interface"
 ifconfig lo 127.0.0.1
+ifconfig lo up >& /dev/null
 
 ######################################
 # trigger udev events
