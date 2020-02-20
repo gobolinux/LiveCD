@@ -52,7 +52,7 @@ done
 # Mount remaining filesystems
 ######################################
 mount -a -t usbfs
-mountpoint -q /System/Kernel/Modules || mount /System/Kernel/Modules
+[ -d /sys/firmware/efi/vars ] && mount -t efivarfs none /sys/firmware/efi/vars
 
 ############################################################
 # Run PostInstall scripts and prepare the Environment Cache
