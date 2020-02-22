@@ -52,7 +52,7 @@ done
 # Mount remaining filesystems
 ######################################
 mount -a -t usbfs
-[ -d /sys/firmware/efi/vars ] && mount -t efivarfs none /sys/firmware/efi/vars
+[ -d /sys/firmware/efi/efivars ] && mount -t efivarfs none /sys/firmware/efi/efivars
 
 ############################################################
 # Run PostInstall scripts and prepare the Environment Cache
