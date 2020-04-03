@@ -62,8 +62,7 @@ defaults_for_language=(
 "qwerty/uk.map" ""
 )
 
-case "$LANG" in
-pt_BR)
+if [ "$LANG" = "pt_BR" ]; then
    defaults_for_language=(
    "qwerty/br-abnt2.map" ""
    "qwerty/br-abnt.map" ""
@@ -72,30 +71,26 @@ pt_BR)
    "qwerty/pt-latin1.map" ""
    "qwerty/pt-latin9.map" ""
    )
-   ;;
-de_DE)
+elif [ "$LANG" = "de_DE" ]; then
    defaults_for_language=(
    "qwertz/de-latin1.map" ""
    "qwertz/de.map" ""
    "qwertz/de-latin1-nodeadkeys.map" ""
    "qwertz/de_CH-latin1.map" ""
    )
-   ;;
-fr_FR)
+elif [ "$LANG" = "fr_FR" ]; then
   defaults_for_language=(
   "azerty/fr-latin1.map" ""
   "azerty/fr-latin9.map" ""
   "azerty/fr-pc.map" ""
   "azerty/fr.map" ""
   )
-  ;;
-hu_HU)
+elif [ "$LANG" = "hu_HU" ]; then
    defaults_for_language=(
    "qwertz/hu.map" ""
    "qwertz/hu101.map" ""
    )
-   ;;
-esac
+fi
 
 while : 
 do
