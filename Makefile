@@ -6,7 +6,7 @@ PACKAGE_ROOT=$(PACKAGE_DIR)/$(PROGRAM)
 PACKAGE_BASE=$(PACKAGE_ROOT)/$(VERSION)
 PACKAGE_FILE=$(PACKAGE_DIR)/$(PROGRAM)--$(VERSION)--$(shell uname -m).tar.bz2
 SVNTAG=`echo $(PROGRAM)_$(VERSION) | tr "[:lower:]" "[:upper:]" | sed  's,\.,_,g'`
-PYLUPDATE=pylupdate4
+PYLUPDATE=pylupdate5
 
 LANG_TEMP_DIR=Data/Language/.Temp
 
@@ -20,7 +20,7 @@ language:
 	for file in ConfigureLiveCD KeymapDialog; \
 	do cat bin/$$file | sed "s/tr \(.*\)/tr\(\1\)/g" > $(LANG_TEMP_DIR)/$$file; \
 	done
-	cd $(LANG_TEMP_DIR)/../; $(PYLUPDATE) LiveCD.pro 2> /dev/null
+	cd $(LANG_TEMP_DIR)/../; $(PYLUPDATE) LiveCD.pro
 	rm -f $(LANG_TEMP_DIR)/*
 	rmdir $(LANG_TEMP_DIR)
 
@@ -39,7 +39,7 @@ verify:
 	! { svn up 2>&1 | grep "^[\?]" | grep -v "Resources/SettingsBackup" ;}
 
 dist: version_check cleanup verify all
-	rm -f Data/Language/tt2_hu_HU.ts && svn up Data/Language/tt2_hu_HU.ts
+	rm -f Data/Language/tt2_hu_HU.ts && git checkout Data/Language/tt2_hu_HU.ts
 	rm -rf $(PACKAGE_ROOT)
 	mkdir -p $(PACKAGE_BASE)
 	SignProgram $(PROGRAM)
@@ -48,6 +48,3 @@ dist: version_check cleanup verify all
 	cd $(PACKAGE_DIR); tar cvp $(PROGRAM) | bzip2 > $(PACKAGE_FILE)
 	rm -rf $(PACKAGE_ROOT)
 	@echo; echo "Package at $(PACKAGE_FILE)"
-	@echo; echo "Now run 'svn copy . http://svn.gobolinux.org/tools/tags/$(SVNTAG)'"; echo
-	! { svn up 2>&1 | grep "^M" | grep -v "Resources/FileHash\|bin/AutoLogin" ;}
-
