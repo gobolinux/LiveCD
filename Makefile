@@ -35,14 +35,10 @@ cleanup:
 	find * -path "*~" -or -path "*/.\#*" | xargs rm -f
 	cd src; make clean
 
-verify:
-	! { svn up 2>&1 | grep "^[\?]" | grep -v "Resources/SettingsBackup" ;}
-
-dist: version_check cleanup verify all
+dist: version_check cleanup all
 	rm -f Data/Language/tt2_hu_HU.ts && git checkout Data/Language/tt2_hu_HU.ts
 	rm -rf $(PACKAGE_ROOT)
 	mkdir -p $(PACKAGE_BASE)
-	SignProgram $(PROGRAM)
 	cat Resources/FileHash
 	ListProgramFiles $(PROGRAM) | cpio -p $(PACKAGE_BASE)
 	cd $(PACKAGE_DIR); tar cvp $(PROGRAM) | bzip2 > $(PACKAGE_FILE)
