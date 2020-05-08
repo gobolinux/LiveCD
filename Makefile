@@ -31,7 +31,6 @@ version_check:
 	@[ "$(VERSION)" = "" ] && { echo -e "Error: run make with VERSION=<version-number>.\n"; exit 1 ;} || exit 0
 
 cleanup:
-	rm -rf Resources/FileHash*
 	find * -path "*~" -or -path "*/.\#*" | xargs rm -f
 	cd src; make clean
 
@@ -39,7 +38,6 @@ dist: version_check cleanup all
 	rm -f Data/Language/tt2_hu_HU.ts && git checkout Data/Language/tt2_hu_HU.ts
 	rm -rf $(PACKAGE_ROOT)
 	mkdir -p $(PACKAGE_BASE)
-	cat Resources/FileHash
 	ListProgramFiles $(PROGRAM) | cpio -p $(PACKAGE_BASE)
 	cd $(PACKAGE_DIR); tar cvp $(PROGRAM) | bzip2 > $(PACKAGE_FILE)
 	rm -rf $(PACKAGE_ROOT)
