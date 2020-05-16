@@ -9,7 +9,7 @@ desde el cual también puedes instalar GoboLinux a tu disco duro.
    [33;1mstartx[0m
 
  * El instalador de GoboLinux puede ser usado en modo gráfico o de texto.
-   En el gráfico, sólo presioneen el ícono "[32mInstall GoboLinux[0m".
+   En el gráfico, seleccione la opción "[32mInstall GoboLinux[0m" en el menu.
    Para instalar usando el modo interactivo basado en texto escriba:
    [33;1mInstaller[0m
 
