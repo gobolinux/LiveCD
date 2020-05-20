@@ -1,9 +1,8 @@
 
 [32;1m ---------------------------- [36;1mÜDVÖZÖL A GOBOLINUX[32;1m ----------------------------[0m
 
-Üdvözlünk a GoboLinux live-CD környezetben! Ez egy összfunkciós
-GoboLinux rendszer, mely közvetlenül errõl a CD-ROM-ról fut, melyrõl
-telepítheted is a GoboLinuxot a merevlemezre.
+Üdvözlünk a GoboLinux live környezetben! Ez egy összfunkciós
+GoboLinux rendszer, amely telepíthető a számítógépére.
 
  * A grafikus környezetbe való belépéshez üsd be:
    [33;1mstartx[0m

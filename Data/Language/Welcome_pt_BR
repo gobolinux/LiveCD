@@ -1,10 +1,9 @@
 
 [32;1m -------------------------- [36;1mBOAS VINDAS AO GOBOLINUX[32;1m --------------------------[0m
 
-Boas vindas ao ambiente live-CD do GoboLinux. Este é um sistema 
-GoboLinux plenamente funcional rodando diretamente deste CD-ROM, a
-partir do qual você pode também instalar o GoboLinux no seu
-disco rígido.
+Boas vindas ao ambiente live do GoboLinux. Este é um sistema 
+GoboLinux plenamente funcional que pode também ser instalado
+no seu computador.
 
  * Para entrar no ambiente gráfico, digite:
    [33;1mstartx[0m

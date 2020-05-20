@@ -1,9 +1,8 @@
 
 [32;1m ---------------------------- [36;1mWELCOME TO GOBOLINUX[32;1m ----------------------------[0m
 
-Welcome to the GoboLinux live-CD environment. This is a fully-functional
-GoboLinux system running directly from this CD-ROM, from which you can
-also install GoboLinux into your hard drive.
+Welcome to the GoboLinux live environment. This is a fully-functional
+GoboLinux system which can also be installed into your computer.
 
  * To enter the graphical environment, type in:
    [33;1mstartx[0m
