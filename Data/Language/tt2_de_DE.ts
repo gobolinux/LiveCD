@@ -15,12 +15,12 @@
     <message>
         <location filename=".Temp/KeymapDialog" line="53"/>
         <source>If you do not select a keyboard map, us.map</source>
-        <translation type="unfinished">Falls sie kein Tastaturlayout auswÃ€hlen wird &apos;de-latin1.map&apos;</translation>
+        <translation type="unfinished">Falls Sie kein Tastaturlayout auswÃ€hlen wird &apos;de-latin1.map&apos;</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="54"/>
         <source>(the US keyboard map) is the default.  Use the UP/DOWN</source>
-        <translation type="unfinished">(das DE-Layout) benutzt. Benutzen sie die AUF/AB</translation>
+        <translation type="unfinished">(das DE-Layout) benutzt. Benutzen Sie die AUF/AB</translation>
     </message>
     <message>
         <location filename=".Temp/KeymapDialog" line="55"/>

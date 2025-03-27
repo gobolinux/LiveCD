@@ -1,21 +1,19 @@
 
 [32;1m ------------------------- [36;1mWILLKOMMEN BEI GOBOLINUX[32;1m ---------------------------[0m
 
-Willkommen in der GoboLinux Live Umgebung!
-Diese Live-CD bietet ein voll funktionsfähiges GoboLinux System
-das direkt von dieser CD-ROM läuft und auch genutzt werden kann
-um GoboLinux auf ihrer Festplatte zu installieren.
+Willkommen in der GoboLinux Live Umgebung! Dies ist ein voll funktionsfähiges
+GoboLinux System welches auch auf Ihrem Rechner installiert werden kann.
 
- * Tippen sie [33;1mstartx[0m ein um die graphische
+ * Geben Sie [33;1mstartx[0m ein um die graphische
    Oberfläche zu starten
 
  * Das GoboLinux-Installationsprogramm kann im
-   textbasierenden oder im graphischen Modus gestartet werden.
-   Für den graphischen Modus wählen sie in der graphischen Oberfläche 
-   auf das "[32mGoboLinux installieren[0m" Option im Menü. 
-   Tippen sie [33;1mInstaller[0m ein falls sie eine textbasierte
-   Installation bevorzugen.
+   textbasierten oder im graphischen Modus genutzt werden.
+   Für den graphischen Modus wählen Sie in der graphischen Oberfläche 
+   die "[32mGoboLinux installieren[0m" Option im Menü. 
+   Tippen Sie [33;1mInstaller[0m in die Kommandozeile
+   falls Sie eine textbasierte Installation bevorzugen.
 
- * Besuchen sie [1mhttps://gobolinux.org[0m um mehr zu erfahren.
+ * Besuchen Sie [1mhttps://gobolinux.org[0m um mehr zu erfahren.
 
 
